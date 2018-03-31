@@ -1,0 +1,163 @@
+
+@font-face {
+    font-family: ScouternaRounded;
+    src: url(fonts/ScouternaRoundedPro.otf);
+}
+
+:root{
+	--width: 1362px;
+	--dark: #282727;
+	--light:#fff;
+	--colorscout: #043A63;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+header{
+	background: #6EAD3B;
+}
+.index header{
+	background: url("bilder/IMG_8281.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: calc(100% - 38px) 38px;;
+	align-content: stretch;
+}
+.index header > nav{
+	grid-row-start: 2;
+	/*height: 18px;*/
+}
+.index header > div{
+	grid-row-start: 1;
+	justify-self: center;
+	align-self: center;
+}
+header > div img{
+	height: 80px;
+}
+header > div{
+	text-align: center;
+	font-size: 107px;
+	font-family: ScouternaRounded;
+	text-transform: uppercase;
+	color: var(--colorscout);
+}
+header > div a{
+	color: var(--colorscout);
+	text-decoration: none;
+	text-shadow: 1px 1px 3px rgba(14,14,14,0.4);
+}
+header nav{
+	background: rgba(255, 255, 255, 0.5);
+	/*padding: 10px 0; */
+}
+header nav ul{
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-items: center;
+	width: var(--width);
+	margin: 0 auto;
+}
+header nav ul li{
+	width: 100%;
+	text-align: center;
+
+}
+header nav ul li a{
+	display: block;
+	padding: 10px;
+	line-height: 18px;
+}
+header nav ul li a:hover{
+	background: var(--dark);
+	color: var(--light);
+}
+main{
+	width: var(--width);
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "heading heading" "featured side" "main main";
+	grid-template-columns: auto 258px;
+}
+main h1{
+	grid-area: heading;
+}
+main #featured{
+	grid-area: featured;
+}
+main #featured img{
+	max-width: 100%;
+}
+#sidebar{
+	grid-area: side;
+}
+article{
+	grid-area: main;	
+}
+.action-box{
+	background: #6EAD3B;
+    min-height: 258px;
+    /* padding: 0; */
+    margin: -276px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+.clear-action-box{
+	height: 258px;
+	margin: 18px 0;
+}
