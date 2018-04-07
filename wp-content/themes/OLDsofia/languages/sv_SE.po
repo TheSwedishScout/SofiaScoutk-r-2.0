@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-11-04 11:11+0100\n"
+"PO-Revision-Date: 2016-11-07 20:03+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: costom_post_types.php:7
+msgid "Events"
+msgstr "Händelser"
+
+#: costom_post_types.php:8
+msgid "Event"
+msgstr "Händelse"
+
+#: costom_post_types.php:50
+msgid "Start time"
+msgstr "Start tid"
+
+#: costom_post_types.php:52
+msgid "End time"
+msgstr "Slutar"
+
+#: costom_post_types.php:54
+msgid "Location"
+msgstr "Plats"
+
+#: costom_post_types.php:56
+msgid "For"
+msgstr "För"
+
+#: costom_post_types.php:58
+msgid "Beavers"
+msgstr "Bäver"
+
+#: costom_post_types.php:59
+msgid "Cubs"
+msgstr "Spårare"
+
+#: costom_post_types.php:60
+msgid "Scouts"
+msgstr "Upptäckare"
+
+#: costom_post_types.php:61
+msgid "Explorer"
+msgstr "Äventyrare"
+
+#: costom_post_types.php:62
+msgid "Network"
+msgstr "Utmanare"
+
+#: costom_post_types.php:63
+msgid "Rover"
+msgstr "Rover"
+
+#: costom_post_types.php:64
+msgid "Leaders"
+msgstr "Ledare"
+
+#: costom_post_types.php:65
+msgid "Troop"
+msgstr "Kår"
+
+#: custom-events-template.php:101
+#, php-format
+msgid "Will be held %1$s at %2$s between %3$s and %4$s"
+msgstr "Kommer hållas %1$s vid %2$s mellan %3$s och %4$s"
+
+#: custom-events-template.php:111
+#, php-format
+msgid "Will be between %1$s and %2$s at %3$s"
+msgstr "Kommer att hållas mellan %1$s och %2$s vid %3$s"
+
+#: custom-events-template.php:121 page.php:53
+msgid "Last modified"
+msgstr "Senast uppdaterad"
+
+#: custom-events-template.php:128
+msgid "No Events incoming"
+msgstr "Inga kommande händelser"
+
+#: footer.php:20
+msgid "This site uses Cookies"
+msgstr "Denna sidan anänder Cookies"
+
+#: functions.php:58
+msgid "Primary menu"
+msgstr "Primär meny"
+
+#: functions.php:59
+msgid "Footer menu"
+msgstr "Sidfots meny"
+
+#: functions.php:60
+msgid "Quick menu"
+msgstr "Snabb åtkomst meny"
+
+#: functions.php:61
+msgid "Scout menu"
+msgstr "Scout meny"
+
+#: functions.php:74
+msgid "Home right sidebar"
+msgstr "Höger sidpanel"
+
+#: functions.php:83
+msgid "Footer"
+msgstr "Sidfots widgets"
+
+#: index.php:13 search.php:26 search.php:97 search.php:163 single.php:12
+msgid " by "
+msgstr " av "
+
+#: index.php:63 search.php:74 single.php:61
+msgid "One Comment"
+msgstr "En komentar"
+
+#: index.php:63 search.php:74 single.php:61
+#, php-format
+msgid "%1$s Comments"
+msgstr "%1$s komentarer"
+
+#: index.php:75 search.php:219
+msgid "Older posts"
+msgstr "Äldre inlägg"
+
+#: index.php:76 search.php:220
+msgid "Newer posts"
+msgstr "Nyare inlägg"
+
+#: index.php:81 page.php:60 search.php:225 single.php:91
+msgid "no content found"
+msgstr "Ingen information hittades"
+
+#: search.php:20
+msgid "posts"
+msgstr "Inlägg"
+
+#: search.php:90
+msgid "Pages"
+msgstr "Sidor"
+
+#: search.php:156
+msgid "Other"
+msgstr "Annat"
+
+#: searchform.php:3 searchform.php:7
+msgid "Search for:"
+msgstr "Sök efter:"
+
+#: searchform.php:5
+msgid "Search..."
+msgstr "Sök..."
+
+#: searchform.php:10
+msgid "Search"
+msgstr "Sök"
+
+#~ msgid "Will be held "
+#~ msgstr "Kommer att hållas "
+
+#~ msgid " at "
+#~ msgstr " vid "
+
+#~ msgid " between "
+#~ msgstr " mellan "
+
+#~ msgid " and "
+#~ msgstr " och "
+
+#~ msgid "Will me between %1$s and %2$s at %3$s"
+#~ msgstr "Kommer att hållas mellan %1$s och %2$s vid %3$s"
+
+#~ msgid " betwen "
+#~ msgstr " mellan "
+
+#~ msgid "Will me betwen %1$s and %2$s at %3$s"
+#~ msgstr "Will me between %1$s and %2$s at %3$s"

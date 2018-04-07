@@ -1,0 +1,11 @@
+id PK
+titel
+description
+excerpt
+start
+end
+location
+image
+
+a date can have mutipule events
+tow events can have same name but not same name whit same time

@@ -1,0 +1,245 @@
+:root{
+	--width: 1362px;
+	--dark: #282727;
+	--light:#fff;
+	--blue: rgb(4,58,99);
+	--sparare: rgb(110,173,59);
+	--upptackare: rgb(77,166,222);
+	--aventyrare: rgb(202,84,16);
+	--utmanare: rgb(182,0,85);
+	--rover: rgb(228,223,24);
+}
+/*fonts'*/
+@font-face {
+    font-family: ScouternaRounded;
+    src: url(fonts/ScouternaRoundedPro.otf);
+}
+@font-face {
+    font-family: TeeULight;
+    src: url(fonts/TeeFranklin-Book.otf);
+    //src: url(fonts/TeeFranklin-UltraLight.otf);
+}
+@font-face {
+    font-family: TeeBold;
+    src: url(fonts/TeeFranklin-Bold.otf);
+    //src: url(fonts/TeeFranklin-UltraLight.otf);
+}
+@font-face {
+    font-family: garamond;
+    src: url(fonts/AGaramondPro-Regular.otf);
+}
+
+h1, h1 a, h2{
+	font-family: TeeULight;
+	color: var(--dark);
+}
+h3,h4,h5,h6{
+	font-family: TeeBold;
+	color: var(--dark);
+}
+h1{
+	font-size: 3em;
+}
+h2{
+	font-size: 2.5em;
+}
+h3{
+	font-size: 1.9em;
+}
+h4{
+	font-size: 1.6em;
+}
+h5{
+	font-size: 1.3em;
+}
+h6{
+	font-size: 1em;
+}
+
+body{
+	display: grid;
+	grid-template-rows: minmax(auto, 258px) auto auto;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	font-family: garamond;
+}
+p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea {
+	font-family: inherit;
+}
+body.home header{
+	min-height: 100vh;
+	position: relative;
+}
+body.home.admin-bar header{
+	min-height: calc(100vh - 32px);
+}
+
+body > header{
+	background-size: cover;
+	margin-bottom: 18px;
+}
+body.home header nav{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+body header nav.fixed{
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	border-bottom: 1px solid var(--dark);
+	bottom: auto;
+	z-index: 100;
+
+}
+body header nav.fixed a{
+	padding: 8px 0;
+}
+body header nav.fixed ul li.menu-item-home{
+	display: block;
+}
+
+body header nav{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+body header nav ul{
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-auto-flow: column;
+	max-width: var(--width);
+	margin: 0 auto;
+	list-style: none;
+
+}
+body header nav ul li.menu-item-home{
+	display: none
+}
+body header nav ul li.menu-item-home a:before{
+	background-image: url(../images/Scoutsymbolen_rgb.png);
+	height: 0.9em;
+	width: 1em;
+	content: "";
+	background-size: 1em 1em;
+	display: inline-block;
+}
+body header nav a{
+	font-family: TeeULight;
+	display: block;
+	padding: 18px 0;
+	text-align: center;
+	width: 100%;
+	text-decoration: none;
+	color: var(--dark);
+}
+body header nav a:hover{
+	background-color: var(--dark);
+	color: var(--light);
+
+}
+.submenu li{
+	border-top: 1px solid var(--dark);
+}
+.submenu a{
+	padding: 2px 0;
+}
+.fixed .submenu a{
+	padding: 0;
+}
+header a.karnamn{
+	display: block;
+	font-size: 134px;
+	text-decoration: none;
+	font-family: ScouternaRounded;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--blue);
+	text-shadow: 1px 1px 3px rgba(14,14,14,0.4);
+}
+header a.karnamn:hover{
+	text-decoration: underline;
+}
+header a.karnamn img{
+	-webkit-filter: drop-shadow(1px 1px 3px rgba(14,14,14,0.4));
+    filter: filter: drop-shadow(1px 1px 3px rgba(14,14,14,0.4));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+body.home header a.karnamn{
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    /* transform: translateX(-50%) translateY(-50%); */
+    text-align: center;
+}
+
+main{
+	width: var(--width);
+	margin: 0 auto;
+}
+main article{
+	display: grid;
+	grid-template-columns:auto 258px;
+	grid-template-rows:auto 1fr;
+	grid-gap: 18px;
+}
+main article:not(:only-of-type):not(:last-child){
+	margin-bottom: 18px;
+	border-bottom: 1px solid var(--dark);
+}
+main article .heading{
+	grid-column: span 2;
+}
+
+.action-box{
+	background: var(--blue);
+    min-height: 258px;
+    /* padding: 0; */
+    margin: -276px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+.clear-action-box{
+	height: 258px;
+	margin: 18px 0;
+}
+.action-box div{
+	width: var(--width);
+	margin: 0 auto;
+	color: var(--light);
+}
+.action-box div h3{
+	color: var(--light);
+}
+/*FOOTER*/
+body > footer{
+	background-color: var(--dark);
+	color: var(--light);
+	margin-top: 18px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 258px 20px;
+	justify-items: center;
+	align-items: center;
+	grid-template-areas: "kontakt action social" ". logga copy"
+}
+body > footer > *:first-child{
+	grid-area: kontakt;
+}
+body > footer > *:nth-child(2){
+	grid-area: action;
+}
+body > footer > *:nth-child(3){
+	grid-area: social;
+}
+body > footer > *:nth-child(4){
+	grid-area: logga;
+}
+body > footer > *:nth-child(5){
+	grid-area: copy;
+}
+
