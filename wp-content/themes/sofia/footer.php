@@ -1,8 +1,10 @@
 <footer>
 	<div>Kontakt vänster</div>
 	<div>action center</div>
-	<div>Sociala medier höger</div>
-	<div>Logga igen Botten mitt</div>
+	<div><?=
+		esc_attr( get_option( 'facebook' ) )
+		?></div>
+	<div><?php the_kårnamn() ?></div>
 	<div>Copy text höger</div>
 </footer>
 

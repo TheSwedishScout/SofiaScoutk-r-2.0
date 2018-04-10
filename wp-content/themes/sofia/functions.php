@@ -1,4 +1,5 @@
 <?php
+include 'inc/admin-function.php';
 // Add Shortcode
 function sofia_max_infobar( $atts , $content = null ) {
 
@@ -56,6 +57,15 @@ function sofia_max_widgets_init() {
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',
     ) );
+    register_sidebar(array(
+    	'name' 			=> __('action', 'sofiascoutkar' ),
+        'id'            => 'action',
+        'description'   => __( 'Action knapp i under kår namn. Ska bara vara en knapp!', 'sofiascoutkar' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>', 
+    ));
 }
 add_action( 'widgets_init', 'sofia_max_widgets_init' );
 
@@ -97,12 +107,14 @@ function sofia_max_theme_setup() {
 function the_kårnamn()
 {
 	$karnamn = str_replace("scoutkår", "", get_bloginfo( 'name' )); 
+	$karnamn = explode("scoutkår", get_bloginfo( 'name' ));
 	?>
-	<a href="/" class="karnamn logo"><?= $karnamn?> <?php
+	<a href="/" class="karnamn logo"><?= $karnamn[0]?> <?php
 		if(has_custom_logo()){
-			//the_custom_logo();
+			
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
 			$logo_image = wp_get_attachment_image_src( $custom_logo_id , 'logo_size' );
+			
 			?><img src="<?= $logo_image[0] ?>"><?php
 		}else{
 			/*echo "Scoutemblem";*/
@@ -110,7 +122,7 @@ function the_kårnamn()
 			
 
 		}
-	?> Scoutkår</a><?php
+	?> Scoutkår <?php //echo $karnamn[1]; ?></a><?php
 }
 
 ?>

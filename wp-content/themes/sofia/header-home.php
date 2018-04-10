@@ -11,7 +11,11 @@
 	<?php 
 	the_kårnamn();
 	?>
-	
+	<?php if ( is_active_sidebar( 'action' ) ) : ?>
+	    <div id="action-btn">
+	        <?php dynamic_sidebar( 'action' ); ?>
+	    </div>
+	<?php endif; ?>
 	<!--<button>action</button>-->
 	
 	<nav id="topMeny">

@@ -1,13 +1,25 @@
 :root{
-	--width: 1362px;
-	--dark: #282727;
-	--light:#fff;
-	--blue: rgb(4,58,99);
-	--sparare: rgb(110,173,59);
-	--upptackare: rgb(77,166,222);
-	--aventyrare: rgb(202,84,16);
-	--utmanare: rgb(182,0,85);
-	--rover: rgb(228,223,24);
+	/*--------------------------------------*/
+	--width: 		1362px;
+	/*--------------------------------------*/
+	--dark: 		rgb(40,39,39);
+	/*--------------------------------------*/
+	--light: 		#fff;
+	/*--------------------------------------*/
+	--blue: 		rgb(4,58,99);
+	/*--------------------------------------*/
+	--sparare: 		rgb(110,173,59);
+	/*--------------------------------------*/
+	--upptackare: 	rgb(77,166,222);
+	/*--------------------------------------*/
+	--aventyrare: 	rgb(202,84,16);
+	/*--------------------------------------*/
+	--utmanare: 	rgb(182,0,85);
+	/*--------------------------------------*/
+	--rover: 		rgb(228,223,24);
+	/*--------------------------------------*/
+	--rover2: 		rgb(128,121,29);
+	/*--------------------------------------*/
 }
 /*fonts'*/
 @font-face {
@@ -29,9 +41,12 @@
     src: url(fonts/AGaramondPro-Regular.otf);
 }
 
-h1, h1 a, h2{
+h1, h1 a, h2, h2 a{
 	font-family: TeeULight;
 	color: var(--dark);
+}
+h1 a:hover, h2 a:hover{
+	color: var(--blue);
 }
 h3,h4,h5,h6{
 	font-family: TeeBold;
@@ -68,6 +83,21 @@ body{
 p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea {
 	font-family: inherit;
 }
+a{
+	color: var(--blue);
+}
+a:hover{
+	color: var(--dark);
+}
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
+/*------------------------------------------------------------HEADER------------------------------------------------------------*/
 body.home header{
 	min-height: 100vh;
 	position: relative;
@@ -156,27 +186,64 @@ header a.karnamn{
 	text-transform: uppercase;
 	text-align: center;
 	color: var(--blue);
-	text-shadow: 1px 1px 3px rgba(14,14,14,0.4);
+	text-shadow: 3px 3px 6px rgba(14,14,14,0.4);
 }
 header a.karnamn:hover{
 	text-decoration: underline;
+	text-shadow: 1px 1px 3px rgba(14,14,14,0.4);
 }
 header a.karnamn img{
-	-webkit-filter: drop-shadow(1px 1px 3px rgba(14,14,14,0.4));
-    filter: filter: drop-shadow(1px 1px 3px rgba(14,14,14,0.4));
+	-webkit-filter: drop-shadow( 3px 3px 6px rgba(14,14,14,0.4));
+    filter: filter: drop-shadow( 3px 3px 6px rgba(14,14,14,0.4));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+header a.karnamn:hover img{
+	-webkit-filter: drop-shadow( 1px 1px 3px rgba(14,14,14,0.4));
+    filter: filter: drop-shadow( 1px 1px 3px rgba(14,14,14,0.4));
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 body.home header a.karnamn{
 	position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
+    bottom: 40%;
     /* transform: translateX(-50%) translateY(-50%); */
     text-align: center;
 }
+body > header > #action-btn{
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:30%;
+	text-align: center;
+}
+body > header > #action-btn a{
+	display: inline-block;
+	padding: 16px;
+	background-color: var(--blue);
+	color: var(--light);
+	text-decoration: none;
+	font-family: TeeBold;
+	font-size: 20px;
+	border-radius: 8px;
+	box-shadow: 3px 3px 6px rgba(14,14,14,0.4);
+}
+body > header > #action-btn a:hover{
+	text-decoration: underline;
+	color: var(--blue);
+	background-color: var(--light);
+	box-shadow: 1px 1px 3px rgba(14,14,14,0.4);
+
+}
+/*--------------------------------------------------------MAIN-------------------------------------------------------*/
+/*--------------------------------------------------------MAIN-------------------------------------------------------*/
+/*--------------------------------------------------------MAIN-------------------------------------------------------*/
+/*--------------------------------------------------------MAIN-------------------------------------------------------*/
+/*--------------------------------------------------------MAIN-------------------------------------------------------*/
 
 main{
-	width: var(--width);
+	max-width: var(--width);
 	margin: 0 auto;
 }
 main article{
@@ -208,21 +275,27 @@ main article .heading{
 	margin: 18px 0;
 }
 .action-box div{
-	width: var(--width);
+	max-width: var(--width);
 	margin: 0 auto;
 	color: var(--light);
 }
 .action-box div h3{
 	color: var(--light);
 }
-/*FOOTER*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+/*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
 body > footer{
 	background-color: var(--dark);
 	color: var(--light);
 	margin-top: 18px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 258px 20px;
+	grid-template-rows: 258px 44px;
 	justify-items: center;
 	align-items: center;
 	grid-template-areas: "kontakt action social" ". logga copy"
@@ -242,4 +315,18 @@ body > footer > *:nth-child(4){
 body > footer > *:nth-child(5){
 	grid-area: copy;
 }
+body > footer .karnamn{
+	font-size: 40px;
+	font-family: ScouternaRounded;
+	line-height: 30px;
+	color: var(--light);
+	text-transform: uppercase;
+	text-decoration: none;
 
+}
+body > footer .karnamn:hover{
+	text-decoration: underline;
+}
+body > footer .karnamn img{
+	height: 30px;
+}
