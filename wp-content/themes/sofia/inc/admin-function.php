@@ -3,7 +3,7 @@
 function sofia_max_admin_page(){
 	add_menu_page( "Theme settings", "Scouterna", "manage_options", "Scout_max", 'sofia_max_theme_create_page', '', 110 );
 	add_submenu_page( 'Scout_max', 'Theme options', 'generaloptions', 'manage_options', 'scout_max_options', 'sofia_max_theme_create_page');
-	add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, '' );
+	//add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, '' );
 	add_action( 'admin_init', 'sofia_max_cusom_settings' );
 }
 add_action( 'admin_menu', 'sofia_max_admin_page' );

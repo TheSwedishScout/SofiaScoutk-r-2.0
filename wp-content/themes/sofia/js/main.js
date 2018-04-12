@@ -3,8 +3,8 @@ jQuery(document).ready(function ($) {
 	  	  	console.log("hej")
 	  	  	readmore();
 	  });
-	var headerHeight = $(".main-header").height()
 	  window.addEventListener('scroll', fixedMenu);
+	var headerHeight = $(".main-header").height()
 	  function fixedMenu (e) {
 	  	if(window.scrollY > headerHeight){
 	  		$('#topMeny')[0].classList.add("fixed");
@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
 	  	}
 	  }
 	  function staticMenu(e) {
+		var headerHeight = $(".main-header").height()
 	  	//if($( "body" ).hasClass( "home" )){
 
 	  	if(window.scrollY < headerHeight){

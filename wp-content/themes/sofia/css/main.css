@@ -243,7 +243,7 @@ body > header > #action-btn a:hover{
 /*--------------------------------------------------------MAIN-------------------------------------------------------*/
 
 main{
-	max-width: var(--width);
+	width: var(--width);
 	margin: 0 auto;
 }
 main article{
@@ -269,18 +269,28 @@ main article .heading{
     width: 100%;
     left: 0;
     box-sizing: border-box;
+    
 }
 .clear-action-box{
 	height: 258px;
 	margin: 18px 0;
 }
-.action-box div{
+.action-box > div{
 	max-width: var(--width);
 	margin: 0 auto;
 	color: var(--light);
+	display: grid;
+    grid-template-columns:auto 258px; 
 }
 .action-box div h3{
 	color: var(--light);
+}
+.action-box img{
+	
+	max-width: 258px;
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 /*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/
 /*-------------------------------------------------------------FOOTER-------------------------------------------------------------*/

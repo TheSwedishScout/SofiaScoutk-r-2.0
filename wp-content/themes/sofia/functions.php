@@ -7,6 +7,8 @@ function sofia_max_infobar( $atts , $content = null ) {
 	$atts = shortcode_atts(
 		array(
 			'rubrik' => 'Rubrik',
+			'img' => '',
+			'color' =>"",
 		),
 		$atts,
 		'Infobar'
@@ -16,10 +18,13 @@ function sofia_max_infobar( $atts , $content = null ) {
 	
 	/*KOLLA efter bilder i content och se till att de hamnar för sigkälva så de hamnar i höger */
 	$tor = "<div class='clear-action-box'></div>
-			<div class='action-box'>
+			<div class='action-box' style='background-color:{$atts['color']}'>
 				<div>
+					<div>
 					<h3>{$atts['rubrik']}</h3>
 					<p>{$content}</p>
+					</div>
+					<img src='{$atts['img']}'>
 				</div>
 			</div>";
 	return $tor;
@@ -106,10 +111,10 @@ function sofia_max_theme_setup() {
 
 function the_kårnamn()
 {
-	$karnamn = str_replace("scoutkår", "", get_bloginfo( 'name' )); 
-	$karnamn = explode("scoutkår", get_bloginfo( 'name' ));
+	//$karnamn = str_replace("scoutkår", "", get_bloginfo( 'name' )); 
+	$karnamn = explode("scoutkår", utf8_encode(strtolower(utf8_decode(get_bloginfo( 'name' )))));
 	?>
-	<a href="/" class="karnamn logo"><?= $karnamn[0]?> <?php
+	<a href="<?= get_home_url(); ?>" class="karnamn logo"><?= $karnamn[0]?> <?php
 		if(has_custom_logo()){
 			
 			$custom_logo_id = get_theme_mod( 'custom_logo' );

@@ -16,7 +16,7 @@ if ( have_posts() ) {
 
 		<div class="exerpt">
 			<?= the_excerpt();?>
-				<span class="readmore" href="<?php //the_permalink(); ?>">Läs mer</span>
+				<a class="readmore" href="<?= the_permalink(); ?>">Läs mer</a>
 			<?php 
 			?>
 		</div>
