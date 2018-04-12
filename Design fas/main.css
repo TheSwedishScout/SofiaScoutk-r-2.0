@@ -3,6 +3,10 @@
     font-family: ScouternaRounded;
     src: url(fonts/ScouternaRoundedPro.otf);
 }
+@font-face {
+    font-family: TeeFranklin-Book;
+    src: url(fonts/TeeFranklin-Book.otf);
+}
 
 :root{
 	--width: 1362px;
@@ -63,8 +67,24 @@ table {
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6{
+	font-family: TeeFranklin-Book;
+	font-weight: 600;
+
+}
+h1{
+	font-size: 3em;
+	padding: 18px 0; 	 	
+}
 header{
 	background: #6EAD3B;
+	font-family: TeeFranklin-Book;
+	font-weight: 600;
+	color:var(--dark);
+}
+a{
+	color:var(--dark);
+	text-decoration: none;
 }
 .index header{
 	background: url("bilder/IMG_8281.jpg");
@@ -149,7 +169,7 @@ article{
 }
 .action-box{
 	background: #6EAD3B;
-    min-height: 258px;
+    min-height: inherit;
     /* padding: 0; */
     margin: -276px 0;
     position: absolute;
@@ -160,4 +180,10 @@ article{
 .clear-action-box{
 	height: 258px;
 	margin: 18px 0;
+}
+.action-box-content{
+	width: var(--width);
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px 0;
 }
