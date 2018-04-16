@@ -16,13 +16,7 @@ if ( have_posts() ) {
 		<div class="exerpt">
 			<?= the_content();?>
 		</div>
-		<div>
-			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-			    <ul id="sidebar">
-			        <?php dynamic_sidebar( 'sidebar-1' ); ?>
-			    </ul>
-			<?php endif; ?>
-		</div>
+		
 		<footer>
 			<?php the_author_link(); the_date( '', ' ', '', true ); ?>
 		</footer>
@@ -31,6 +25,13 @@ if ( have_posts() ) {
 	} // end while
 } // end if
 ?>
+	<div>
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+		    <ul id="sidebar">
+		        <?php dynamic_sidebar( 'sidebar-1' ); ?>
+		    </ul>
+		<?php endif; ?>
+	</div>
 </main>
 <?php
 get_footer();

@@ -2,7 +2,6 @@
 get_header('home');
 ?>
 <main>
-fwresnkäognkölvsfdnvlöskd
 <?php
 if ( have_posts() ) {
 	while ( have_posts() ) {

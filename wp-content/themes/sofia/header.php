@@ -7,8 +7,18 @@
 	$post = get_post();
  wp_head() ?>
 </head>
-<body>
-	<header class="main-header" style="background-image: url(<?= the_post_thumbnail_url('pageHeader'); ?>)">
+<body <?php echo 'class="' . join( ' ', str_replace("custom-background", "", get_body_class())) . '"'; ?>>
+	<header class="main-header" style="<?php
+		if ( is_home() ) {
+			?>
+			background-image: url(<?php header_image(); ?>);
+			<?php
+		}else{
+			?>
+			background-image: url(<?= the_post_thumbnail_url('pageHeader'); ?>);
+			<?php
+		}
+		?>">
 		<nav id="topMeny">
 		  <?php wp_nav_menu('main'); 
 			$post = get_post();
@@ -39,5 +49,13 @@
 		  <?php the_kårnamn(); ?>
 	</header>
 	<?php 
-	
+		/*if ( is_front_page() && is_home() ) {
+		  echo ' Default homepage';
+		} elseif ( is_front_page() ) {
+		  echo ' static homepage';
+		} elseif ( is_home() ) {
+		  echo ' blog page';
+		} else {
+		  echo 'everything else';
+		}*/
 	?>
