@@ -169,6 +169,18 @@ body header nav a:hover{
 	color: var(--light);
 
 }
+body header nav a:active{
+	background-color: var(--blue);
+}
+body header nav .current-menu-item a, body header nav .current_page_item a{
+	background-color: var(--dark);
+	color: var(--light);
+} 
+.current-page-ancestor a{
+	background-color: var(--blue);
+	color: var(--light);
+
+}
 .submenu li{
 	border-top: 1px solid var(--dark);
 }
